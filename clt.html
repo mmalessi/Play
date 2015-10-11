@@ -1,0 +1,203 @@
+<hmtl>
+	<head><title>CLT</title></head>
+	
+	<body>
+	<h1>Central Limit Theorem Demo</h1>
+		<p>This demo illustrates the distribution of sample means, where each sample consists of randomly generated numbers from 0 to 1.
+			Use the slide bars to explore how changing the size of each sample and the number of samples affects the distribution!</p>
+		<p> 
+		<label for="Nsamplesize" 
+         style="display: inline-block; width: 240px; text-align: right">
+         Sample Size = <span id="Nsamplesize-value">…</span>
+  		</label>
+  		<input type="range" min="1" max="1000" id="Nsamplesize">
+  		<label for="NUMSAMPLES" 
+         style="display: inline-block; width: 240px; text-align: right">
+         Number of Samples = <span id="NUMSAMPLES-value">…</span>
+  		</label>
+  		<input type="range" min="1" max="1000" id="NUMSAMPLES">
+  		</p>	
+	</body>
+	<style>
+	h1 { font: 45px Helvetica;
+ 		font-weight: light;
+        color: #484848; }
+      body { font: 12px Helvetica; color: #484848;}
+	
+
+
+.axis {
+  font: 10px sans-serif;
+  color: #303030;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+//var sample_size = d3.range(1, 1);
+//var num_samples = d3.range(1, 1);
+var sample_size = 0;
+var num_samples = 50; 
+//console.log(sample_size.length)
+
+d3.select("#Nsamplesize").on("input", function() {
+   update(+this.value);
+});
+
+d3.select("#NUMSAMPLES").on("input", function() {
+   update2(+this.value);
+});
+
+//defaults["sample_size"].length;
+
+function produce_data(){
+	function produce_mean(){
+		var list_of_randoms = [];
+		for (i=0; i < sample_size; i++) {
+			list_of_randoms.push(Math.random() * 1.0000000); };
+
+		var mean = d3.mean(list_of_randoms);	
+		return mean;
+	};
+
+	var list_of_means = [];
+	for (j=0; j < num_samples; j++) {
+		list_of_means.push(produce_mean());};
+	return list_of_means.sort();};
+
+update(500);
+function update(Nsamplesize){
+	d3.select("#Nsamplesize-value").text(Nsamplesize);
+  	d3.select("Nsamplesize").property("value", Nsamplesize);
+	sample_size = Nsamplesize;
+	d3.selectAll("svg").remove();
+	make();
+}
+
+update2(500);
+function update2(NUMSAMPLES){
+	d3.select("#NUMSAMPLES-value").text(NUMSAMPLES);
+  	d3.select("NUMSAMPLES").property("value", NUMSAMPLES);
+	num_samples = NUMSAMPLES;
+	d3.selectAll("svg").remove();
+	make();
+}
+
+
+/*************Start of bar chart Area************************/
+
+function make(){
+	var data = produce_data();
+	console.log(data);
+	d3.selectAll("body").datum(data).call(histogramChart()
+    	.bins(d3.scale.linear().ticks(50)).tickFormat(d3.format(".02f")));
+    console.log("Im in make!");
+}
+make();
+
+function histogramChart() {
+  var margin = {top: 0, right: 0, bottom: 20, left: 0},
+      width = 960,
+      height = 500;
+
+  var histogram = d3.layout.histogram(),
+      x = d3.scale.ordinal(),
+      y = d3.scale.linear(),
+      xAxis = d3.svg.axis().scale(x).orient("bottom").tickSize(6, 0);
+      console.log("I'm in histogram!")
+
+  function chart(selection) {
+    selection.each(function(data) {
+    	console.log("I'm in chart!")
+
+      // Compute the histogram.
+      data = histogram(data);
+
+      // Update the x-scale.
+      x   .domain(data.map(function(d) { return d.x; }))
+          .rangeRoundBands([0, width - margin.left - margin.right], .1);
+
+      // Update the y-scale.
+      y   .domain([0, d3.max(data, function(d) { return d.y; })])
+          .range([height - margin.top - margin.bottom, 0]);
+
+      // Select the svg element, if it exists.
+      var svg = d3.select(this).selectAll("svg").data([data]);
+
+      // Otherwise, create the skeletal chart.
+      var gEnter = svg.enter().append("svg").append("g");
+      gEnter.append("g").attr("class", "bars");
+      gEnter.append("g").attr("class", "x axis");
+
+      // Update the outer dimensions.
+      svg .attr("width", width)
+          .attr("height", height);
+
+      // Update the inner dimensions.
+      var g = svg.select("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      // Update the bars.
+      var bar = svg.select(".bars").selectAll(".bar").data(data);
+      bar.enter().append("rect");
+      bar.exit().remove();
+      bar .attr("width", x.rangeBand())
+          .attr("x", function(d) { return x(d.x); })
+          .attr("y", function(d) { return y(d.y); })
+          .attr("height", function(d) { return y.range()[0] - y(d.y); })
+          .order()
+          .style("fill", "#8B54F0");
+
+      // Update the x-axis.
+      g.select(".x.axis")
+          .attr("transform", "translate(0," + y.range()[0] + ")")
+          .call(xAxis);
+    });
+  }
+
+  chart.margin = function(_) {
+    if (!arguments.length) return margin;
+    margin = _;
+    return chart;
+  };
+
+  chart.width = function(_) {
+    if (!arguments.length) return width;
+    width = _;
+    return chart;
+  };
+
+  chart.height = function(_) {
+    if (!arguments.length) return height;
+    height = _;
+    return chart;
+  };
+
+  // Expose the histogram's value, range and bins method.
+  d3.rebind(chart, histogram, "value", "range", "bins");
+
+  // Expose the x-axis' tickFormat method.
+  d3.rebind(chart, xAxis, "tickFormat");
+
+  return chart;
+}
+
+
+
+
+</script>
+</hmtl>
