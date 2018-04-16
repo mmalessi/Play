@@ -2,12 +2,14 @@
 	<head><title>QueersHere</title></head>
 	
 	<body>
-
-<script>
-	var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres"];
-	function getMessage() {
-   		return leaders[Math.floor(Math.random() * leaders.length)];
-		};
-	getMessage();
-</script>
+		<p id="name"></p>
+		<script>
+			var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres"];
+			function getMessage() {
+   				return leaders[Math.floor(Math.random() * leaders.length)];
+					      };
+			getMessage();
+			document.getElementById("name").innerHTML = getMessage();
+		</script>
+	</body>
 </hmtl>
