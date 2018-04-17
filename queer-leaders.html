@@ -25,37 +25,34 @@
     		text-align: center;
 		};
 		
-		.bin {
+		div {
 		 min-height: 10em;
     		 display: table-cell;
    		 vertical-align: middle
 		};
 		
-	
-		
-		
 	</style>
 	
 	<body>
-		<div class="bin">
+		<div>
 			<p id="name"></p>
-		<script>
-			var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres", "Pepi II", "Akhenaten", "Hipparchus", "Han WuDi", "Nicomedes IV", "Ai of Han", "Hadrian", "Elagabalus", "Richard I", "Phillip Augustus", "Edward II", "Ferdinando II de'Medici", "Qianlong", "Abraham Lincoln", "Manvendra Singh Gohil", "Luisa Isabel Alvarez de Toledo y Maura", "Elio Di Rupo", "Leo Varadkar", "Ana Brnabic"];
-			function getMessage() {
-   				return leaders[Math.floor(Math.random() * leaders.length)];
-					      };
-			document.getElementById("name").innerHTML = getMessage();
-			
-			var colors = ["#d94343", "#56c648", "#e0c436", "#67a6f3", "#a453c6"];
-			function getColor() {
-				return colors[Math.floor(Math.random() * colors.length)];
-					    };
-			document.body.style.backgroundColor = getColor();
-					      
-		</script>
-		<div class="footer">
-  			<p id="foot">A queer a day! :) MacKenzie Alessi.</p>
-		</div>
+			<script>
+				var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres", "Pepi II", "Akhenaten", "Hipparchus", "Han WuDi", "Nicomedes IV", "Ai of Han", "Hadrian", "Elagabalus", "Richard I", "Phillip Augustus", "Edward II", "Ferdinando II de'Medici", "Qianlong", "Abraham Lincoln", "Manvendra Singh Gohil", "Luisa Isabel Alvarez de Toledo y Maura", "Elio Di Rupo", "Leo Varadkar", "Ana Brnabic"];
+				function getMessage() {
+					return leaders[Math.floor(Math.random() * leaders.length)];
+						      };
+				document.getElementById("name").innerHTML = getMessage();
+
+				var colors = ["#d94343", "#56c648", "#e0c436", "#67a6f3", "#a453c6"];
+				function getColor() {
+					return colors[Math.floor(Math.random() * colors.length)];
+						    };
+				document.body.style.backgroundColor = getColor();
+
+			</script>
+			<div class="footer">
+				<p id="foot">A queer a day! :) MacKenzie Alessi.</p>
+			</div>
 		</div>
 	</body>
 </hmtl>
