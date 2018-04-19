@@ -1,56 +1,89 @@
-<hmtl>
-	<head><title>QueersHere</title></head>
-	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<style>
-		#name {
-		font-family: 'Black Han Sans', sans-serif;
-		font-size: 60px;
-		color: white;
-		text-align: center;
-		vertical-align: middle;
-		  }
-		
-		#foot {
-		font-family: 'Montserrat', sans-serif;
-		font-size: 17px;
-		color: white;
-		}
-		
-		.footer {
-    		position: fixed;
-    		left: 0;
-    		bottom: 0;
-    		width: 100%;
-    		text-align: center;
-		}
-		
-		.container {
-		vertical-align: middle;
-		}
-		
-	</style>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QueersHere</title>
+		<!-- Set the viewport width to device width for mobile -->
+  		<meta name="viewport" content="width=device-width" />
+  		<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  		<style>
+			html, body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			#name {
+				font-family: 'Black Han Sans', sans-serif;
+				font-size: 60px;
+				color: white;
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+			 }
+			
+			#foot {
+				font-family: 'Montserrat', sans-serif;
+				font-size: 17px;
+				color: white;
+			}
+			
+			.footer {
+	    		position: fixed;
+	    		left: 0;
+	    		bottom: 0;
+	    		width: 100%;
+	    		text-align: center;
+			}
+
+			.container {
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+    			position: absolute;
+    			display: table;
+			}
+			
+		</style>
+	</head>
 	
 	<body>
 		<div class="container">
 			<p id="name"></p>
-			<script>
-				var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres", "Pepi II", "Akhenaten", "Hipparchus", "Han WuDi", "Nicomedes IV", "Ai of Han", "Hadrian", "Elagabalus", "Richard I", "Phillip Augustus", "Edward II", "Ferdinando II de'Medici", "Qianlong", "Abraham Lincoln", "Manvendra Singh Gohil", "Luisa Isabel Alvarez de Toledo y Maura", "Elio Di Rupo", "Leo Varadkar", "Ana Brnabic"];
-				function getMessage() {
-					return leaders[Math.floor(Math.random() * leaders.length)];
-						      };
-				document.getElementById("name").innerHTML = getMessage();
-
-				var colors = ["#d94343", "#56c648", "#e0c436", "#67a6f3", "#a453c6"];
-				function getColor() {
-					return colors[Math.floor(Math.random() * colors.length)];
-						    };
-				document.body.style.backgroundColor = getColor();
-
-			</script>
 		</div>
 		<div class="footer">
 			<p id="foot">A queer a day! :) MacKenzie Alessi.</p>
 		</div>
+
+		<script>
+			var leaders = ["Alan Turing", "James Baldwin", "Ellen DeGeneres", "Pepi II", "Akhenaten", "Hipparchus", "Han WuDi", "Nicomedes IV", "Ai of Han", "Hadrian", "Elagabalus", "Richard I", "Phillip Augustus", "Edward II", "Ferdinando II de'Medici", "Qianlong", "Abraham Lincoln", "Manvendra Singh Gohil", "Luisa Isabel Alvarez de Toledo y Maura", "Elio Di Rupo", "Leo Varadkar", "Ana Brnabic"],
+				colors = ["#d94343", "#56c648", "#e0c436", "#67a6f3", "#a453c6"];
+			
+			/**
+			 * Selet a random name from the leaders array to display on the page
+			 *
+			 * @method getMessage
+			 * @returns string
+			 */
+			function getMessage() {
+				return leaders[Math.floor(Math.random() * leaders.length)];
+			};
+
+			/**
+			 * Selet a random color for the page background from the colors array
+			 *
+			 * @method getColor
+			 * @returns string
+			 */
+			function getColor() {
+				return colors[Math.floor(Math.random() * colors.length)];
+			}
+
+			document.body.style.backgroundColor = getColor();
+			document.getElementById("name").innerHTML = getMessage();
+
+		</script>
 	</body>
-</hmtl>
+</html>
