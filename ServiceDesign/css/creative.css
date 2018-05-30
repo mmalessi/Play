@@ -13,6 +13,9 @@ body {
     background-image: linear-gradient(to right, #CDCDCD 1px, transparent 1px) !important;
 }
 
+#clipper {
+  clip-path: circle(85px at 100px 75px);
+}
 
 hr {
   max-width: 50px;
