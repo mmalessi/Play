@@ -10,6 +10,14 @@ blockquote{
     width: 30em;
     color:#820000;
 }
+blockquote2{
+    float:right;
+    width: 15em;
+    padding: 0.5em;
+    border-left: 2px solid #e98300;
+    
+}
+
 p {
   word-spacing: 0.25em;
 }
