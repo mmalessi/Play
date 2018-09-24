@@ -224,7 +224,7 @@ var color = d3.scaleOrdinal()
 			}
 		});
 		simulation.nodes(nodes).on('tick', ticked);
-		svg.style('background-color', '#eee');
+		svg.style('background-color', 'white');
 		let node = svg.selectAll('.node')
 			.data(nodes)
 			.enter().append('g')
