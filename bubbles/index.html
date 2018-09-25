@@ -43,6 +43,13 @@
 		.legend-size circle {
 			fill: rgb(31, 119, 180);
 		}
+        
+        .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+        }
+
 	</style>
 </head>
 <body>
@@ -55,10 +62,10 @@
 		// Based loosely from this D3 bubble graph https://bl.ocks.org/mbostock/4063269
 		// And this Forced directed diagram https://bl.ocks.org/mbostock/4062045
 		let data = [{
-			cat: 'Afterschool', name: 'Afterschool', value: 6,
-            icon: 'aoenames/12.png',
+			cat: 'Afterschool', name: 'Afterschool', project: 'Project Shoutout', pdesc: 'im not super good at riddles', value: 6,
+            icon: 'aoenames/afterschool-27.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. 
+				The name of a dethroned king or royal dog makes an odd paring with this two-limb cog. A first and last name. One normal one kind of lame. Indeed, lame would you be if the latter were flatter. The answer? Scramble “afterschool”, and you’ll rule that the output is Charles… 
 			`
 		}, {
 			cat: 'Curriculum & Instruction', name: 'Curriculum & Instruction', value: 16,
@@ -80,7 +87,7 @@
 			`
 		}, {
 			cat: 'Earned Rev.', name: 'Earned Rev.', value: 3,
-            icon: 'aoenames/06.png',
+            icon: 'aoenames/aoe_names-12-25.png',
 			desc: `
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. `
 		}, {
@@ -91,13 +98,13 @@
 			`
 		}, {
 			cat: 'Governance', name: 'Governance', value: 10,
-            icon: 'aoenames/03.png',
+            icon: 'aoenames/governance-26.png',
 			desc: `
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
 			`
 		}, {
 			cat: 'Higher Ed./C.T.E.', name: 'Higher Ed./C.T.E.', value: 5,
-            icon: 'aoenames/13.png',
+            icon: 'aoenames/hecte-28.png',
 			desc: `
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
 			`
@@ -145,7 +152,7 @@
 			`
 		}, {
 			cat: 'Program Eval.', name: 'Program Eval.', value: 18,
-            icon: 'aoenames/17.png',
+            icon: 'aoenames/pe-24.png',
 			desc: `
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
 			`
@@ -218,6 +225,8 @@ var color = d3.scaleOrdinal()
 				id: data.cat + '.' + (data.name.replace(/\s/g, '-')),
 				cat: data.cat,
 				name: data.name,
+                project: data.project,
+                pdesc: data.pdesc,
 				value: data.value,
 				icon: data.icon,
 				desc: data.desc,
@@ -314,8 +323,8 @@ var color = d3.scaleOrdinal()
 			.attr('y', d => - d.radius * 0.7)
 			.attr('height', d => d.radius * 2 * 0.7)
 			.attr('width', d => d.radius * 2 * 0.7)
-		node.append('title')
-			.text(d => (d.cat + '::' + d.name + '\n' + format(d.value)))
+		/*node.append('title')
+			.text(d => (d.name + '\n' + format(d.value) + ' experts'))*/
 		let legendOrdinal = d3.legendColor()
 			.scale(color)
 			.shape('circle');
@@ -348,12 +357,36 @@ var color = d3.scaleOrdinal()
 			.attr('width', 350 * 0.8)
 				.append('xhtml:div')
 				.classed('circle-overlay__inner', true);
+        
+        var div = d3.select("body").append("div")	
+            .attr("class", "tooltip")				
+            .style("opacity", 0);
+        
+        
 		infoBox.append('h2')
 			.classed('circle-overlay__title', true)
 			.text(d => d.name);
 		infoBox.append('p')
 			.classed('circle-overlay__body', true)
 			.html(d => d.desc);
+        infoBox.append('h4')
+            .classed('circle-overlay__project', true)
+            .html(d => d.project)
+            .on("mouseover", function(d) {		
+                    console.log(this)
+                    div.transition()		
+                        .duration(200)		
+                        .style("opacity", .9);		
+                    div.html(d.pdesc)	
+                        .style("left", (d3.event.pageX) + "px")		
+                        .style("top", (d3.event.pageY - 28) + "px");	
+                    })					
+                .on("mouseout", function(d) {		
+                    div.transition()		
+                        .duration(500)		
+                        .style("opacity", 0);	
+                });
+            
        // .style("fill", function(d){return console.log(textColor(color(d.cat)))});
         
         // d3.selectAll("#circle-overlay__body").style("fill", function(d){return console.log(textColor(color(d.cat)))});
