@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bubble Expertise</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<style>
 		html, body {
@@ -19,9 +18,11 @@
 		svg {
 			margin:auto;
 			display:block;
+            padding-top: 2%;
+            padding-left: 2%;
 		}
 		.circle-overlay {
-			font-size: 16px;
+			font-size: 14px;
 			border-radius: 30%;
 			position: absolute;
 			overflow: hidden;
@@ -70,128 +71,114 @@
 	</style>
 </head>
 <body>
-	<h1>Expertise</h1>
-	<svg width="100%" height="700" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
-
+	<svg class = "legend3" width="100%" height="700" padding-top="5px" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+    
+    
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
 	<script>
 		// Based loosely from this D3 bubble graph https://bl.ocks.org/mbostock/4063269
 		// And this Forced directed diagram https://bl.ocks.org/mbostock/4062045
 		let data = [{
-			cat: 'Afterschool', name: 'Afterschool', project: 'Project Shoutout', pdesc: 'im not super good at riddles', value: 6,
+			cat: 'Afterschool & Early Childhood', name: 'Afterschool & Early Childhood', project: 'E.g. Strategic Planning, Program Evaluation, Earned Revenue Strategies, Board Development.',number:'8 Experts', value: 8,
             icon: 'aoenames/afterschool-27.png',
 			desc: `
-				The name of a dethroned king or royal dog makes an odd paring with this two-limb cog. A first and last name. One normal one kind of lame. Indeed, lame would you be if the latter were flatter. The answer? Scramble “afterschool”, and you’ll rule that the output is Charles… 
+				Developing strategies and programs for afterschool programs.
 			`
 		}, {
-			cat: 'Curriculum & Instruction', name: 'Curriculum & Instruction', value: 16,
+			cat: 'Curriculum & Instruction', name: 'Curriculum, Instruction', value: 16, project: 'E.g. Instructional Model Design; Curriculum and Assessments Development/Adaptation; Intervention Block Design; Teacher Professional Development', number: '16 Experts',
             icon: 'aoenames/ca-30.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Developing rigorous and aligned instructional models, curricula, and assessments.
 			`
 		}, {
-			cat: 'D.E.I.', name: 'D.E.I.', value: 21,
+			cat: 'D.E.I.', name: 'D.E.I.', value: 21, project: 'E.g. DEI Assessment; DEI Vision and Strategy Development; Diverse Team and Board Recruitment; Building Inclusive Culture.', number: '21 Experts',
             icon: 'aoenames/dei-19.png',
 			desc: `
-				Infusing diversity, equity and inclusion across all aspects of the organization, from human capital to program outcomes. 
-                Examples: DEI Vision and Strategy development, Recruiting a diverse team and Board, Building an inclusive organizational culture.
-                21 experts   
-			`
-		}, {
-			cat: 'Early childhood', name: 'Early childhood', value: 2,
-            icon: 'aoenames/ec.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
-			`
-		}, {
-			cat: 'Earned Rev.', name: 'Earned Rev.', value: 3,
-            icon: 'aoenames/aoe_names-12-25.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. `
-		}, {
-			cat: 'Fundraising', name: 'Fundraising', value: 7,
-            icon: 'aoenames/fundraising-16.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
-			`
-		}, {
-			cat: 'Governance', name: 'Governance', value: 10,
-            icon: 'aoenames/governance-26.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
-			`
-		}, {
-			cat: 'Higher Ed./C.T.E.', name: 'Higher Ed./C.T.E.', value: 5,
-            icon: 'aoenames/hecte-28.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
-			`
-		}, {
-			cat: 'Human Capital', name: 'Human Capital', value: 33,
-            icon: 'aoenames/human_capital-12.png',
-			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Infusing diversity, equity and inclusion across all aspects of an organization, from strategy to human capital to program outcomes.
 			`
 		},  {
-			cat: 'Marketing & Communications', name: 'Marketing & Communications', value: 10,
+			cat: 'Fundraising', name: 'Fundraising', value: 10, project: 'E.g. Fundraising Plan; Grant Proposal Template, Earned Revenue Strategy Development.', number: '10 Experts',
+            icon: 'aoenames/fundraising-16.png',
+			desc: `
+				Resourcing organizations through fundraising, grant writing, and earned revenue strategy.
+			`
+		}, {
+			cat: 'Governance', name: 'Governance', value: 10, project:'E.g. Board Roles and Expectations; Board Recruitment; Governance Protocols and Practices; Board Training and Management.', number:'10 Experts',
+            icon: 'aoenames/governance-26.png',
+			desc: `
+				Assisting organizations in setting governance protocols and practices, and building a strong and supportive board.
+			`
+		}, {
+			cat: 'Higher Ed./C.T.E.', name: 'Higher Ed./C.T.E.', value: 5, project:'Eg. Supports for Minority Serving Institutions; Program Design to Support Underserved Student Populations.', number:'5 Experts.',
+            icon: 'aoenames/hecte-28.png',
+			desc: `
+				Developing strategies and programs for Higher Ed and CTE institutions.
+			`
+		}, {
+			cat: 'Human Capital', name: 'Human Capital', value: 33, project: 'E.g. Recruitment, Hiring, and Onboarding Support; Staff Professional Development Plans; Staff Evaluation and Feedback; Compensation Review.', number: '33 Experts',
+            icon: 'aoenames/human_capital-12.png',
+			desc: `
+				Recruiting, developing, and retaining a high-performing team.
+			`
+		},  {
+			cat: 'Marketing & Communications', name: 'Marketing & Communications', value: 10, project: 'Eg. Brand Identity Development; Launch Communications; One Pager Creation; Video Development.', number: '10 Experts',
             icon: 'aoenames/m.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Creating and communicating compelling narratives for organizations. 
 			`
 		}, {
-			cat: 'Ops & Finance', name: 'Ops & Finance', value: 16,
+			cat: 'Ops & Finance', name: 'Ops & Finance', value: 16, project:'E.g. Budget Development; Pricing Tool Development; Finance + Accounting Review; Operations Plan Development; Legal Guidance.', number: '16 Experts',
             icon: 'aoenames/opsfin-29.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				 Building effective and efficient financial, legal, and operational support services.
 			`
 		}, {
-			cat: 'Org. Culture', name: 'Org. Culture', value: 20,
+			cat: 'Org. Culture', name: 'Org. Culture', value: 20, project:'E.g. Organizational Values, Norms, and Expectations; Discipline; Restorative Practices; DEI; Student and Staff Handbooks.', number:'20 Experts',
             icon: 'aoenames/soc-34.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Developing a strong and inclusive culture.
 			`
 		}, {
-			cat: 'Other', name: 'Other', value: 22,
+			cat: 'Other', name: 'Other', value: 22, project:'E.g. Policy, Early Childhood, Research, Socio-emotional Learning, Event Planning, etc.', number:'22 Experts',
             icon: 'aoenames/other-20.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				This includes all categories where we had 5 or fewer experts.
 			`
 		}, {
-			cat: 'PL/PB', name: 'PL/PB', value: 13,
+			cat: 'PL/PB', name: 'PL/PB', value: 13, project: 'E.g. Personalized Learning Strategy; Technology Selection; Implementation Support; Professional Development', number:'13 Experts',
             icon: 'aoenames/plpb-23.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Implementing rigorous and aligned personalized learning models.
 			`
 		}, {
-			cat: 'Program Design', name: 'Program Design', value: 64,
+			cat: 'Program Design', name: 'Program Design', value: 64, project: "E.g. Strategic Plan Development; Business Plan Development; Theory of Change; Pilot Design.", number: "64 Experts",
             icon: 'aoenames/program_design-18.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
 			`
 		}, {
-			cat: 'Program Eval.', name: 'Program Eval.', value: 18,
+			cat: 'Program Eval.', name: 'Program Eval.', value: 18, project: 'E.g. Evaluation Design; Developmental, Formative and Summative Evaluation.', number: '18 experts',
             icon: 'aoenames/pe-24.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Measuring, gathering, and analyzing data to capture learnings and evaluate program results. 
 			`
 		}, {
-			cat: 'Special Ed.', name: 'Special Ed.', value: 9,
-            icon: 'aoenames/se.png',
+			cat: 'Diverse Learners', name: 'Diverse Learners', value: 9, project:'E.g. Plan for Meeting Needs of Diverse Learners; Professional Development for Teachers', number: '9 Experts',
+            icon: 'aoenames/ec.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Identifying and meeting the needs of diverse learners (children with disabilities, ELL students, gifted students, etc.). 
 			`
 		}, {
-			cat: 'Start-up Support', name: 'Start-up Support', value: 22,
+			cat: 'Start-up Support', name: 'Start-up Support', value: 22, project: 'E.g. 501c3 application; Charter Application Development or Review; Launch Project Plan Development.', number: '22 Experts',
             icon: 'aoenames/sus-32.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Getting help with crucial elements of starting an organization or school.
 			`
 		}, {
-			cat: 'Tech. & Data Systems', name: 'Tech. & Data Systems', value: 9,
+			cat: 'Tech. & Data Systems', name: 'Tech. & Data Systems', value: 9, project: 'E.g. Data Dashboard Creation; Tech Tool Identification or Development; Website Development', number: '9 Experts',
             icon: 'aoenames/tds-21.png',
 			desc: `
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in consequat augue. Nunc blandit quis lectus bibendum fringilla. Quisque ac nunc vel quam commodo egestas. Vestibulum nec maximus ex. 
+				Leveraging technology to improve operations and outcomes.
 			`
 		}
                    ];
@@ -208,8 +195,14 @@
 		let format = d3.format(',d');
 
 var color = d3.scaleOrdinal()
-    .domain(["Afterschool", "Curriculum & Instruction", "D.E.I.", "Early childhood", "Earned Rev.", "Fundraising", "Governance", "Higher Ed./C.T.E.", "Human Capital", "Marketing & Communications", "Ops & Finance", "Org. Culture","Other","PL/PB","Program Eval.","Special Ed.","Start-up Support","Tech. & Data Systems"])
-    .range(["#ffc0cb", "#00e5e6", "#e86478", "#ffd700", "#648fff", "#40e0d0", "#ff7373", "#e6e6fa", "#d3ffce", "#ffa500", "#b0e0e6", "#7fffd4","#ff4d4d", "#dcf3ff", "#f6546a", "#fff68f", "#e3f6c1", "#ff80ff"]);
+    .domain(["Afterschool & Early Childhood", "Curriculum & Instruction", "D.E.I.", "Fundraising", "Governance", "Higher Ed./C.T.E.", "Human Capital", "Marketing & Communications", "Ops & Finance", "Org. Culture","Other","PL/PB","Program Eval.","Diverse Learners","Start-up Support","Tech. & Data Systems"])
+    .range(["#ffc0cb", "#00e5e6", "#e86478", "#40e0d0", "#ff7373", "#e6e6fa", "#d3ffce", "#ffa500", "#b0e0e6", "#7fffd4","#ff4d4d", "#dcf3ff", "#f6546a", "#fff68f", "#e3f6c1", "#ff80ff"]);
+        
+var symbol = d3.scaleOrdinal()
+    .domain(["Afterschool & Early Childhood", "Curriculum & Instruction", "D.E.I.", "Fundraising", "Governance", "Higher Ed./C.T.E.", "Human Capital", "Marketing & Communications", "Ops & Finance", "Org. Culture","Other","PL/PB","Program Eval.","Diverse Learners","Start-up Support","Tech. & Data Systems", "Program Design"])
+    .range(["aoenames/afterschool-27.png", "aoenames/ca-30.png", "aoenames/dei-19.png", "aoenames/fundraising-16.png", "aoenames/governance-26.png", "aoenames/hecte-28.png", "aoenames/human_capital-12.png", "aoenames/m.png", "aoenames/opsfin-29.png", "aoenames/soc-34.png","aoenames/other-20.png", "aoenames/plpb-23.png", "aoenames/pe-24.png", "aoenames/ec.png", "aoenames/sus-32.png", "aoenames/tds-21.png", "aoenames/program_design-18.png"]);
+        
+        
 		// use pack to calculate radius of the circle
 		let pack = d3.pack()
 			.size([width , height ])
@@ -245,7 +238,7 @@ var color = d3.scaleOrdinal()
 				cat: data.cat,
 				name: data.name,
                 project: data.project,
-                pdesc: data.pdesc,
+                number: data.number,
 				value: data.value,
 				icon: data.icon,
 				desc: data.desc,
@@ -329,9 +322,9 @@ var color = d3.scaleOrdinal()
 				.attr('x', 0)
 				.attr('y', (d, i, nodes) => (13 + (i - nodes.length / 2 - 0.5) * 10))
 				.text(name => name);
-		// display image as circle icon
+		//display image as circle icon
         
-        //        .style("fill", function(d){return textColor(color(d.cat))});
+       // .style("fill", function(d){return textColor(color(d.cat))});
        
 		node.filter(d => String(d.icon))/*.includes('img/'))*/
 			.append('image')
@@ -341,31 +334,100 @@ var color = d3.scaleOrdinal()
 			.attr('x', d => - d.radius * 0.7)
 			.attr('y', d => - d.radius * 0.7)
 			.attr('height', d => d.radius * 2 * 0.7)
-			.attr('width', d => d.radius * 2 * 0.7)
+			.attr('width', d => d.radius * 2 * 0.7);
+        
 		/*node.append('title')
             .classed("tootlip", true)
             .text(d => (d.pdesc));*/
-		let legendOrdinal = d3.legendColor()
+		/*let legendOrdinal = d3.legendColor()
 			.scale(color)
-			.shape('circle');
-		let legend = svg.append('g')
+			.shape('circle')
+            //.on("mouseover", function () {return console.log(this)});
+            
+		let legend = svg.append('g') 
 			.classed('legend-color', true)
 			.attr('text-anchor', 'start')
 			.attr('transform','translate(20,30)')
 			.style('font-size','12px')
-			.call(legendOrdinal);
-		let sizeScale = d3.scaleOrdinal()
+            .call(legendOrdinal)
+            .on("mouseover", function() {console.log(this)});*/
+        
+         var svgLegend3 = d3.select(".legend3").append("svg")
+            .attr("width", width).attr("height", height);
+        
+        
+        function showID() {
+            //return this; doesn't work
+            ID = this.class;
+            alert ('ID is: ' + ID);
+        }
+        
+        //D3 Vertical Legend//////////////////////////
+        
+        var legend3 = svgLegend3.selectAll('.legend3')
+            .data(color.domain())
+            .enter().append('g')
+            .attr("class", "legends3")
+            .attr("transform", function (d, i) {
+            {
+                return "translate(0," + i * 20 + ")"
+            }
+        });/*.on('click', function(d,i){
+                 d3.selectAll("rect")
+                    .style("opacity", 0.1);
+                // make the one selected be un-dimmed
+                d3.selectAll("circle")
+                    .style("opacity", 0.1);
+                d3.select(console.log(this))
+                    .style("opacity", 1);
+                console.log(d);}
+               )
+        ;*/
+        
+        legend3.append("svg:image")
+            .attr("xlink:href",  function(d) { return symbol(d);})
+            .attr("x", function(d) { return -1;})
+            .attr("y", function(d) { return -1;})
+            .attr("height", 20)
+            .attr("width", 20);
+        
+        
+        console.log(color.domain())
+        
+        /*legend3.append('rect')
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", 10)
+            .attr("height", 10)
+            .style("fill", function (d, i) {
+            return color(i)
+        });*/
+        
+        legend3.append('text')
+            .attr("x", 20)
+            .attr("y", 10)
+        //.attr("dy", ".35em")
+        .text(function (d, i) {
+            return d
+        })
+            .attr("class", "textselected")
+            .style("text-anchor", "start")
+            .style("font-size", 15);
+		
+        let sizeScale = d3.scaleOrdinal()
   			.domain(['less experts', 'more experts'])
   			.range([5, 10] );
-		let legendSize = d3.legendSize()
+	
+        let legendSize = d3.legendSize()
 			.scale(sizeScale)
 			.shape('circle')
 			.shapePadding(10)
 			.labelAlign('end');
+        
 		let legend2 = svg.append('g')
 			.classed('legend-size', true)
 			.attr('text-anchor', 'start')
-			.attr('transform', 'translate(200, 25)')
+			.attr('transform', 'translate(250, 25)')
 			.style('font-size', '12px')
 			.call(legendSize);
 
@@ -389,22 +451,13 @@ var color = d3.scaleOrdinal()
 		infoBox.append('p')
 			.classed('circle-overlay__body', true)
 			.html(d => d.desc);
-        infoBox.append('h4')
+        infoBox.append('p')
             .classed('circle-overlay__project', true)
-            .html(d => d.project)
-            .on("mouseover", function(d) {		
-                    console.log(this)
-                    div.transition()		
-                        .duration(200)		
-                        .style("opacity", .9);		
-                    div.html(d.pdesc)	
-                    })					
-                .on("mouseout", function(d) {		
-                    div.transition()		
-                        .duration(500)		
-                        .style("opacity", 0);	
-                });
-            
+            .html(d => d.project);
+        infoBox.append('h4')
+            .classed('circle-overlay__number', true)
+            .html(d => d.number)
+        
        // .style("fill", function(d){return console.log(textColor(color(d.cat)))});
         
         // d3.selectAll("#circle-overlay__body").style("fill", function(d){return console.log(textColor(color(d.cat)))});
