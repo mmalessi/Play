@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<style>
+	</style>
+</head>
+<body>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+	
+<script>
+		var spaceCircles = [
+            {"lat":50, "long":50, "desc":"hey there"},
+            {"lat":100, "long":50, "desc":"hey there"},
+            {"lat":150, "long":50, "desc":"hey there"},
+            {"lat":75, "long":100, "desc":"hey there"},
+            {"lat":125, "long":100, "desc":"hey there"},
+        ];
+        
+        var lat = spaceCircles.lat,
+            long = spaceCircles.long;
+
+    
+       
+
+
+        var svgContainer = d3.select("body").append("svg")
+                            .attr("width", 200)
+                            .attr("height", 200);
+    
+        //Append a defs (for definition) element to your SVG
+        var defs = svgContainer.append("defs");
+
+        //Append a linearGradient element to the defs and give it a unique id
+        var linearGradient = defs.append("linearGradient")
+            .attr("id", "linear-gradient");
+       
+        //Horizontal gradient
+        linearGradient
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0%");
+    
+        //Set the color for the start (0%)
+        linearGradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#81bef0"); 
+
+        //Set the color for the end (100%)
+        linearGradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#036aff");
+ 
+        var circles = svgContainer.selectAll("circle")
+                            .data(spaceCircles)
+                            .enter()
+                            .append("circle");
+
+        var circleAttributes = circles
+                               .attr("cx", function (d) { return d.lat; })
+                               .attr("cy", function (d) { return d.long; })
+                               .attr("r", 20 )
+                               .style("fill", "url(#linear-gradient)")
+                               .on("click", function () {
+                                   
+                                  });
+                                
+                                
+</script>
+</body>
+</html>
