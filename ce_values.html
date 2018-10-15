@@ -11,23 +11,24 @@
 	
 <script>
 		var spaceCircles = [
-            {"lat":50, "long":50, "desc":"hey there"},
-            {"lat":100, "long":50, "desc":"hey there"},
-            {"lat":150, "long":50, "desc":"hey there"},
-            {"lat":75, "long":100, "desc":"hey there"},
-            {"lat":125, "long":100, "desc":"hey there"},
+            {"lat":100, "long":100, "desc":"one"},
+            {"lat":200, "long":100, "desc":"two"},
+            {"lat":300, "long":100, "desc":"three"},
+            {"lat":150, "long":200, "desc":"four"},
+            {"lat":250, "long":200, "desc":"five"},
         ];
         
         var lat = spaceCircles.lat,
-            long = spaceCircles.long;
+            long = spaceCircles.long,
+            desc = spaceCircles.desc;
 
     
        
 
 
         var svgContainer = d3.select("body").append("svg")
-                            .attr("width", 200)
-                            .attr("height", 200);
+                            .attr("width", 500)
+                            .attr("height", 500);
     
         //Append a defs (for definition) element to your SVG
         var defs = svgContainer.append("defs");
@@ -63,9 +64,19 @@
                                .attr("cy", function (d) { return d.long; })
                                .attr("r", 20 )
                                .style("fill", "url(#linear-gradient)")
-                               .on("click", function () {
+                               .on("click", function (d) {
+                                   console.log(this);
+                                   //d3.select(this).attr("r", 50);
+                                   var clickedCircle = this;
                                    
-                                  });
+                                   d3.selectAll('circle').attr('r', function () {
+                                       if (this === clickedCircle) { return 50 }
+                                       else { return 20 }; });
+                                   
+                                   d3.selectAll('circle').transition().style('opacity',function () {
+                                       if (this === clickedCircle) {return 1.0 }
+                                       else { return 0.5};
+                                  })});
                                 
                                 
 </script>
