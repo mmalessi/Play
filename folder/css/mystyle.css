@@ -1,0 +1,190 @@
+/*Navbar*/
+.fa-1x {
+font-size: 2.5rem;
+}
+.navbar-toggler.toggler-example {
+cursor: pointer;
+}
+.dark-blue-text {
+color: white;
+font-family: objektiv-mk1, sans-serif;
+}
+
+#nav{
+    background-color: black; 
+}
+#linktext {
+    color: white;
+    padding-left: 10%;
+    font-family: objektiv-mk1, sans-serif;
+    font-weight: 100;
+    font-size: 3em;
+}
+
+#linktext:hover {
+    color: #F99B00;
+}
+
+/*homepage*/
+body {
+    font-family: objektiv-mk1, sans-serif;
+}
+/*about-us*/
+.centered_heading {
+    //top: 0; left: 0; bottom: 0; right: 0;
+    margin: 0 auto;
+    max-width: 275px;
+    position: relative;
+    bottom: 0;
+}
+
+h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 4em;
+    align-content: center;
+}
+
+h2 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2.5em;
+}
+
+h3 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 1.5em;
+}
+
+h4 {
+ font-family: 'Hammersmith One', sans-serif;
+ font-size: 1.4em;   
+}
+
+.about-us-text {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.about-us{
+    padding-bottom: 10%;
+}
+p {
+    font-size: 1.3em;
+}
+
+#adaptive {
+    max-width: 25em;
+    min-width: 10em;
+    height: auto;
+}
+#responsive {
+    max-width: 25em;
+    min-width: 10em;
+    height: auto;
+}
+
+/*team section*/
+.team {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+.centered_heading2 {
+    //top: 0; left: 0; bottom: 0; right: 0;
+    margin: 0 auto;
+    max-width: 460px;
+    position: relative;
+    bottom: 0;
+}
+
+#profileimg{
+    max-width: 20em;
+    min-width: 13em;
+    height: auto;
+}
+
+.team p{
+    font-size: 1em;
+}
+
+/*othello*/
+hp-content {
+  display: flex;
+
+
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+hp-slide {
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+
+    
+  font-size: 5vmin;
+  text-align: left;
+  color: black;
+}
+
+hp-presentation>hp-slide {
+    display: none;
+}
+
+hp-presentation>hp-slide.active {
+    display: inline-block;
+    opacity: 1;
+    animation-name: slide_transition;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes slide_transition {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+hp-presentation {
+  display: flex;
+  width: 100vmin;
+  height: 100vmin;
+}
+
+
+/*hp-title {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: .7em;
+    position:absolute;
+    right: 10%;
+    top: 65%;
+}
+
+hp-paragraph{
+    font-size: .34em;
+    font-family: objektiv-mk1, sans-serif;
+    font-weight: 100;
+    width: 25%;
+    height: auto;
+    position:absolute;
+    right: 10%;
+    top: 70%;
+    text-align: right;
+}*/
+
+hp-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: -40%;
+    top: 0%;
+}
