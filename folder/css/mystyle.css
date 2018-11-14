@@ -81,6 +81,7 @@ p {
     max-width: 25em;
     min-width: 10em;
     height: auto;
+    border-radius: 30px;
 }
 
 /*team section*/
@@ -88,6 +89,7 @@ p {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
+    padding-bottom: 5%
 }
 .centered_heading2 {
     //top: 0; left: 0; bottom: 0; right: 0;
@@ -187,4 +189,27 @@ hp-img {
     position: relative;
     left: -40%;
     top: 0%;
+}
+
+img.button{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transition: 0.4s;
+}
+
+img.button:hover {
+    width: 1.2%;
+    position: absolute;
+}
+
+/*FOOTER*/
+.footer {
+   display: inline-block;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
 }
