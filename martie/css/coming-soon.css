@@ -229,7 +229,7 @@ video {
 .content {
     height:100vh;
     overflow:hidden;
-    background-image: url('/vendor/martie/img/martie_background.png');
+    background-image: url('https://mmalessi.github.io/Play/martie/img/martie_background.png');
     background-size: 140%;
     background-repeat: no-repeat;
     overflow: hidden;
