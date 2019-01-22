@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>chart created with amCharts | amCharts</title>
+        <meta name="description" content="chart created using amCharts live editor" />
+        
+        <!-- amCharts javascript sources -->
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+        
+        <!-- amCharts javascript code -->
+        <script type="text/javascript">
+           AmCharts.makeChart("barchart",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "maxSelectedSeries": 19,
+                    "colors": [
+                       "#edfbc1"
+                    ],
+                    "startDuration": 2,
+                    "fontFamily": "Avenir",
+                    "fontSize": 13,
+                    "categoryAxis": {
+                        "autoWrap": true,
+                        "gridPosition": "start",
+                        "titleFontSize": 14,
+                        "titleRotation": 0,
+                        "axisColor": "#FFFFFF",
+                        "axisThickness": 2,
+                        "gridAlpha": 0
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[category]]: [[value]]",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-1",
+                            "title": "<2 years of experience",
+                            "type": "column",
+                            "valueField": "<2 years of experience"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "stackType": "regular",
+                            "titleFontSize": 14,
+                            "axisColor": "#FFFFFF",
+                            "axisThickness": 2,
+                            "gridAlpha": 0,
+                            "maximum": 100
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {
+                        "fontSize": 12
+                    },
+    
+                
+                    "dataProvider": [
+                        {
+                            "category": "Curriculum Development",
+                            "<2 years of experience": "100",
+                            
+                        },
+                        {
+                            "category": "Leadership, Coaching",
+                            "<2 years of experience": "100",
+                           
+                        },
+                        {
+                            "category": "Communication",
+                            "<2 years of experience": "100",
+            
+                        },
+                        {
+                            "category": "Contracts, Legal Analysis",
+                            "<2 years of experience": "95",
+                            
+                        },
+                        
+                        {
+                            "category": "Organizational Structure",
+                            "<2 years of experience": "90",
+                            
+                        },
+                        
+                        {
+                            "category": "Information Architecture",
+                            "<2 years of experience": "90",
+                            
+                        },
+                        {
+                            "category": "HTML, CSS",
+                            "<2 years of experience": "60",
+                            
+                        },
+                        {
+                            "category": "Python",
+                            "<2 years of experience": "60",
+                            
+                        }
+                    ],
+                "rotate": true
+                }
+            );
+        </script>
+    </head>
+    <body>
+        <div id="barchart" style="width: 100%; height: 400px;" ></div>
+    </body>
+</html>
