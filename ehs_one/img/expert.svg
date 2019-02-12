@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="277px" height="305px" viewBox="0 0 277 305" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>expert</title>
+    <desc>Created with Sketch.</desc>
+    <g id="expert" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero" cx="139" cy="86" r="67"></circle>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="8" fill-rule="nonzero" cx="116" cy="86" r="12"></circle>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="8" fill-rule="nonzero" cx="160" cy="86" r="12"></circle>
+        <path d="M129,87.5 L145.069555,87.5" id="Path-31" stroke="#FFFFFF" stroke-width="8" fill-rule="nonzero"></path>
+        <path d="M174,86.1662903 L199.054475,79" id="Path-32" stroke="#FFFFFF" stroke-width="10" fill-rule="nonzero"></path>
+        <path d="M78,86.1662903 L103.054475,79" id="Path-32" stroke="#FFFFFF" stroke-width="10" fill-rule="nonzero" transform="translate(90.527238, 82.583145) scale(-1, 1) translate(-90.527238, -82.583145) "></path>
+        <polyline id="Path-34" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero" points="93.6492151 139.694239 35.1595745 164.675 35.1595745 263.687595"></polyline>
+        <polygon id="Star" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero" points="191 238.5 158.671811 254.259867 164.845946 220.879933 138.691892 197.240133 174.835906 192.370067 191 162 207.164094 192.370067 243.308108 197.240133 217.154054 220.879933 223.328189 254.259867"></polygon>
+    </g>
+</svg>

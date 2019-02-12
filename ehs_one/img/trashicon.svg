@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="346px" viewBox="0 0 240 346" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>trashicon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="trashicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-22" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero" points="8.8 123.2 37.3668733 340 205.627463 340 231.2 123.2"></polygon>
+        <path d="M68.8,123.2 L89.6,314.4" id="Path-23" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero"></path>
+        <path d="M147.2,123.2 L168,314.4" id="Path-23" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero" transform="translate(157.600000, 218.800000) scale(-1, 1) translate(-157.600000, -218.800000) "></path>
+        <path d="M105.6,37.8458307 L89.3060354,9.6 C77.4420618,15.6940275 68.5203753,24.1668193 62.5409757,35.0183756 C56.5615761,45.8699319 53.5812509,58.99714 53.6,74.4 L86.0619177,71.216248 C86.5669898,62.8033259 88.450359,55.8114542 91.7120254,50.2406327 C94.9736918,44.6698112 99.6030166,40.5382106 105.6,37.8458307 Z" id="Path-24" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero"></path>
+        <path d="M184,37.8458307 L167.706035,9.6 C155.842062,15.6940275 146.920375,24.1668193 140.940976,35.0183756 C134.961576,45.8699319 131.981251,58.99714 132,74.4 L164.461918,71.216248 C164.96699,62.8033259 166.850359,55.8114542 170.112025,50.2406327 C173.373692,44.6698112 178.003017,40.5382106 184,37.8458307 Z" id="Path-24" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero" transform="translate(158.000000, 42.000000) scale(-1, 1) translate(-158.000000, -42.000000) "></path>
+        <path d="M149.22623,112.089555 L132.972831,83.6751504 L115.869894,113.298305 L97.3556903,148.861884 L129.73679,145.659131 C130.240604,137.195999 132.119285,130.162399 135.372831,124.558331 C138.626377,118.954262 143.244176,114.798003 149.22623,112.089555 Z" id="Path-24" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero" transform="translate(123.290960, 116.268517) scale(-1, 1) rotate(-120.000000) translate(-123.290960, -116.268517) "></path>
+        <circle id="Oval" stroke="#FFFFFF" stroke-width="12" fill-rule="nonzero" cx="120" cy="68" r="14.4"></circle>
+    </g>
+</svg>

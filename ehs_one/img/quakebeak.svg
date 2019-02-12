@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="308px" height="346px" viewBox="0 0 308 346" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>quakebeak</title>
+    <desc>Created with Sketch.</desc>
+    <g id="quakebeak" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="earthquake_safety" transform="translate(10.000000, 3.000000)" fill-rule="nonzero">
+            <path d="M107,104.012639 L107,17 L101.559026,10 L187.47928,10 L182,17 L182,104.012639 C213.834591,118.333934 236,150.328463 236,187.5 C236,238.034055 195.034055,279 144.5,279 C93.9659454,279 53,238.034055 53,187.5 C53,150.328463 75.1654085,118.333934 107,104.012639 Z" id="Combined-Shape" fill="#0098DB"></path>
+            <path d="M169.512163,117.647547 L169.512163,17 L187.47928,10 L182,17 L182,104.012628 C213.834591,118.333934 236,150.328463 236,187.5 C236,238.034055 195.034055,279 144.5,279 C119.727424,279 139.438171,238.558804 153.088188,195.020522 C160.026952,172.888547 165.059299,138.429732 169.512163,117.647547 Z" id="Combined-Shape" fill="#0284BD"></path>
+            <polygon id="Path" stroke="#FFFFFF" stroke-width="10" fill="#009B76" points="148.960233 180 113.913873 213.150285 142.359789 251.593015 106 294.511865 127.480116 336.555878 181.466057 333.910983 159.162432 299.07139 194.338285 248.872128 146.771801 213.150285"></polygon>
+            <polyline id="Path-2" stroke="#009B76" stroke-width="10" transform="translate(270.579637, 169.974455) scale(-1, 1) translate(-270.579637, -169.974455) " points="288.159274 119 253 141.189978 288.159274 161.145309 253 183.141514 288.159274 201.145309 253 220.94891"></polyline>
+            <polyline id="Path-2" stroke="#009B76" stroke-width="10" points="36 119 0.84072646 141.189978 36 161.145309 0.84072646 183.141514 36 201.145309 0.84072646 220.94891"></polyline>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="5" fill="#0098DB" cx="154.5" cy="111.5" r="18.5"></circle>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="5" fill="#0098DB" cx="161.5" cy="54.5" r="11.5"></circle>
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="5" fill="#0098DB" cx="143.5" cy="10.5" r="10.5"></circle>
+        </g>
+    </g>
+</svg>

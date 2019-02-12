@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="277px" height="305px" viewBox="0 0 277 305" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>evaluate</title>
+    <desc>Created with Sketch.</desc>
+    <g id="evaluate" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polyline id="Path-25" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero" points="210 138 210 7 10 7 10 269 130 269"></polyline>
+        <path d="M189.5,301 C142.279654,301 104,262.720346 104,215.5 C104,168.279654 142.279654,130 189.5,130 C236.720346,130 275,168.279654 275,215.5 C275,262.720346 236.720346,301 189.5,301 Z M147,216.482587 L184.47928,254.682173 L233,181 L223.90649,174.225214 L184.47928,235.099428 L154,207.760347 L147,216.482587 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M40,77.5 L174,77.5" id="Path-27" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero"></path>
+        <path d="M40,130.5 L174,130.5" id="Path-27" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero"></path>
+        <path d="M40,184.5 L174,184.5" id="Path-27" stroke="#FFFFFF" stroke-width="15" fill-rule="nonzero"></path>
+    </g>
+</svg>

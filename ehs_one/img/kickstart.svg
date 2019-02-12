@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="327px" height="292px" viewBox="0 0 327 292" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>kickstart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="69" cy="69" r="69"></circle>
+    </defs>
+    <g id="kickstart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="kickstarter" transform="translate(0.000000, 1.000000)">
+            <polygon id="Path-9" fill="#927D4D" fill-rule="nonzero" points="51.9250778 95.0325056 164.562007 29.5895752 276.217488 95.0325056 165.414846 160.73137"></polygon>
+            <polygon id="Path-7" fill="#D2C295" fill-rule="nonzero" points="51.8356797 95.0325056 163.562007 30.2916772 113.086445 0.554001962 0.185395992 64.4038525"></polygon>
+            <polygon id="Path-8" fill="#B3995D" fill-rule="nonzero" points="163.562007 29.3031151 215.741602 0.554001962 326.966714 63.6625026 275.652218 95.0325056"></polygon>
+            <g id="Path-11" transform="translate(130.000000, 26.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#EAAB00" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <polygon fill="#DAA002" fill-rule="nonzero" mask="url(#mask-2)" points="54.8397003 109.827696 72.5345348 127.484469 155.732395 78 102.817315 30.3505155"></polygon>
+            </g>
+            <g id="Group-4" transform="translate(162.000000, 44.000000)" fill-rule="nonzero" stroke="#DAD7CB" stroke-width="3">
+                <path d="M16.2765957,28.1068714 L16.2765957,2.09278351 L14.6365857,0 L40.5345348,0 L38.8829787,2.09278351 L38.8829787,28.1068714 C48.4785116,32.3884956 55.1595745,41.9538702 55.1595745,53.0670103 C55.1595745,68.1751297 42.8116831,80.4226804 27.5797872,80.4226804 C12.3478913,80.4226804 0,68.1751297 0,53.0670103 C0,41.9538702 6.68106285,32.3884956 16.2765957,28.1068714 Z" id="Combined-Shape" fill="#0098DB"></path>
+                <path d="M67.0434403,44.6084749 L83.4562131,72.0133672 C84.3767363,73.5503921 84.8629118,75.3084062 84.8629118,77.1 C84.8629118,82.567619 80.4305309,87 74.9629118,87 L39.7753938,87 C38.1201768,87 36.4913768,86.5849868 35.0379757,85.7929207 C30.2370082,83.1765169 28.4660693,77.1635495 31.0824731,72.3625819 L45.4685112,45.9649353 L45.4685112,16.3418307 L43.9033293,14.3505155 L68.6196414,14.3505155 L67.0434403,16.3418307 L67.0434403,44.6084749 Z" id="Combined-Shape" fill="#009B76"></path>
+            </g>
+            <circle id="Oval" fill="#007C92" fill-rule="nonzero" cx="132" cy="110" r="69"></circle>
+            <rect id="Rectangle" fill="#DAD7CB" fill-rule="nonzero" x="87" y="80" width="88" height="67" rx="10"></rect>
+            <path d="M87,90 L175,90 L175,137 C175,142.522847 170.522847,147 165,147 L97,147 C91.4771525,147 87,142.522847 87,137 L87,90 Z" id="Rectangle" fill="#EAAB00" fill-rule="nonzero"></path>
+            <circle id="Oval" fill="#AFADA3" fill-rule="nonzero" cx="149" cy="85" r="2"></circle>
+            <circle id="Oval" fill="#AFADA3" fill-rule="nonzero" cx="156" cy="85" r="2"></circle>
+            <circle id="Oval" fill="#AFADA3" fill-rule="nonzero" cx="163" cy="85" r="2"></circle>
+            <rect id="Rectangle" fill="#0098DB" fill-rule="nonzero" x="102" y="104" width="60" height="15"></rect>
+            <rect id="Rectangle" fill="#009B76" fill-rule="nonzero" x="102" y="119" width="60" height="15"></rect>
+            <rect id="Rectangle" fill="#0098DB" fill-rule="nonzero" x="97" y="75" width="20" height="15" rx="4"></rect>
+            <rect id="Rectangle" fill="#EAAB00" fill-rule="nonzero" x="100" y="77" width="15" height="11" rx="4"></rect>
+            <polygon id="Path-3" fill="#B3995D" fill-rule="nonzero" points="164.427106 161.640614 164.427106 290.744519 275.649215 226.192566 275.649215 95.5601723"></polygon>
+            <polygon id="Path-3" fill="#D2C295" fill-rule="nonzero" transform="translate(109.038161, 193.152346) scale(-1, 1) translate(-109.038161, -193.152346) " points="53.4271059 161.640614 53.4271059 290.744519 164.649215 226.192566 164.649215 95.5601723"></polygon>
+            <polygon id="Path-5" fill="#D2C295" fill-rule="nonzero" points="165.414846 160.33671 276.802668 95.0325056 326.966714 125.684608 217.741066 189.971082"></polygon>
+            <polygon id="Path-6" fill="#B3995D" fill-rule="nonzero" points="52.4527445 95.0325056 165.562007 160.549571 113.463661 189.971082 0.185395992 126.814612"></polygon>
+        </g>
+    </g>
+</svg>
