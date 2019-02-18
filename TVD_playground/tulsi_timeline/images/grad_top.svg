@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="100px" viewBox="0 0 4 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>grad_top</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="22.244108%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="grad_top" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(2.000000, 50.000000) scale(1, -1) translate(-2.000000, -50.000000) " x="0" y="0" width="4" height="100"></rect>
+    </g>
+</svg>
