@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>TVD Starter Page</title>
+  <meta name="author" content="MacKenzie Alessi">
+
+<!--Styleseheets-->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+    
+<!--Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/ieq0rkg.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ieq0rkg.css">    
+
+</head>
+
+<body>
+<!--navbar--really just a link back to the launch site-->
+    <div class="navbar">
+        <h4><a id="logo" href="https://www.voterdeck.com/">The Voter Deck</a></h4>
+    </div>
+<!--Body Border-->
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+<!--Main Content-->
+    <div class="container">
+          <div class="text"> 
+                <h1>Tulsi Gabbard</h1>
+                <p>Looks like you got the link to the sneak peak! Welcome to Gabbard’s spread. There is way more to come, but check out what we have so far.</p>
+                <h2>Rhetoric Timelines</h2>
+                <p>What is Gabbard’s view on LGBTQ+ issues? After announcing her 2020 presidential bid, Gabbard released a <a class="hyperlink" href="https://www.youtube.com/watch?v=eLb3KVBErig">video</a> apologizing for her past behavior towards towards the LGBTQ+ community. But, what was that behavior? Should you believe her? What is she saying now? The timeline below is a growing display of all her political comments about the issue. We’ve categorized and highlighted the words/phrases that are associate with hostility towards or support for the LGBTQ+ community. So what do you think?</p>
+        </div>
+                <iframe src="https://mmalessi.github.io/Play/TVD_playground/tulsi_timeline/vertical.html"></iframe>
+    
+    </div>    
+    
+<!--Scripts-->
+  <script src="js/main.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/vendor/jquery-3.3.1.min.js"></script>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>  
+  <!--navbar-->
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementsByClassName("navbar").style.backgroundColor = "red";
+              
+          } else {
+            document.getElementsByClassName("navbar").style.backgroundColor = "white";
+          }
+        }
+    </script>
+</body>
+</html>
